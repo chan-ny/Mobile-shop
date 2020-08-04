@@ -16,5 +16,36 @@ namespace Mobilephone
         {
             InitializeComponent();
         }
+
+        private void formLogin_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if(rAdmin.Checked == true)
+            {
+                Manager.Login.loginAdmain(txtAdmin.Text, txtpwd.Text, new formLogin());
+                txtAdmin.Text = "";
+                txtpwd.Text = "";
+                //this.Hide();
+            }
+            if(rVender.Checked== true)
+            {
+                Manager.Login.loginUser(txtAdmin.Text, txtpwd.Text, new formLogin());
+                txtAdmin.Text = "";
+                txtpwd.Text = "";
+                //this.Hide();
+
+            }
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+            
+        }
     }
 }

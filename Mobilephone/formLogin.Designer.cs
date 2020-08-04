@@ -30,16 +30,17 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formLogin));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.txtpwd = new System.Windows.Forms.TextBox();
+            this.txtAdmin = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.rVender = new System.Windows.Forms.RadioButton();
+            this.rAdmin = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -56,6 +57,17 @@
             this.panel1.Size = new System.Drawing.Size(448, 107);
             this.panel1.TabIndex = 0;
             // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Phetsarath OT", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label1.Location = new System.Drawing.Point(80, 24);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(292, 61);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "ເຂົ້າສູ້ລະບົບ";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.LightGray;
@@ -66,23 +78,14 @@
             this.panel2.Size = new System.Drawing.Size(448, 381);
             this.panel2.TabIndex = 1;
             // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Arial", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(83, 24);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(292, 61);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Login System";
-            // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.rAdmin);
+            this.groupBox1.Controls.Add(this.rVender);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtpwd);
+            this.groupBox1.Controls.Add(this.txtAdmin);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -94,44 +97,19 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "values";
             // 
-            // label2
+            // button2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(87, 46);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 19);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Email :";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(87, 123);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(96, 19);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Password :";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(87, 68);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(224, 35);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(87, 145);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(224, 35);
-            this.textBox2.TabIndex = 1;
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(189, 247);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(77, 28);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "Cancel";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -139,36 +117,74 @@
             this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(106, 210);
+            this.button1.Location = new System.Drawing.Point(106, 247);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(77, 28);
             this.button1.TabIndex = 2;
             this.button1.Text = "OK";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // txtpwd
             // 
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(189, 210);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(77, 28);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Cancel";
-            this.button2.UseVisualStyleBackColor = true;
+            this.txtpwd.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtpwd.Location = new System.Drawing.Point(87, 182);
+            this.txtpwd.Multiline = true;
+            this.txtpwd.Name = "txtpwd";
+            this.txtpwd.PasswordChar = '*';
+            this.txtpwd.Size = new System.Drawing.Size(224, 35);
+            this.txtpwd.TabIndex = 1;
+            this.txtpwd.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // label4
+            // txtAdmin
             // 
-            this.label4.BackColor = System.Drawing.Color.Silver;
-            this.label4.ForeColor = System.Drawing.Color.Red;
-            this.label4.Location = new System.Drawing.Point(47, 261);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(288, 85);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "label4";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.txtAdmin.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAdmin.Location = new System.Drawing.Point(87, 105);
+            this.txtAdmin.Multiline = true;
+            this.txtAdmin.Name = "txtAdmin";
+            this.txtAdmin.Size = new System.Drawing.Size(224, 35);
+            this.txtAdmin.TabIndex = 1;
+            this.txtAdmin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(87, 160);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(96, 19);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Password :";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(87, 83);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(61, 19);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Email :";
+            // 
+            // rVender
+            // 
+            this.rVender.AutoSize = true;
+            this.rVender.Location = new System.Drawing.Point(212, 35);
+            this.rVender.Name = "rVender";
+            this.rVender.Size = new System.Drawing.Size(81, 23);
+            this.rVender.TabIndex = 3;
+            this.rVender.TabStop = true;
+            this.rVender.Text = "Vender";
+            this.rVender.UseVisualStyleBackColor = true;
+            // 
+            // rAdmin
+            // 
+            this.rAdmin.AutoSize = true;
+            this.rAdmin.Location = new System.Drawing.Point(107, 35);
+            this.rAdmin.Name = "rAdmin";
+            this.rAdmin.Size = new System.Drawing.Size(76, 23);
+            this.rAdmin.TabIndex = 4;
+            this.rAdmin.TabStop = true;
+            this.rAdmin.Text = "Admin";
+            this.rAdmin.UseVisualStyleBackColor = true;
             // 
             // formLogin
             // 
@@ -181,6 +197,7 @@
             this.Name = "formLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.formLogin_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
@@ -195,12 +212,13 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtpwd;
+        private System.Windows.Forms.TextBox txtAdmin;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.RadioButton rAdmin;
+        private System.Windows.Forms.RadioButton rVender;
     }
 }

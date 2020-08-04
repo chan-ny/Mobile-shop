@@ -23,7 +23,6 @@ namespace Mobilephone
             panelProduct.Visible = false;
             panelCustomer.Visible = false;
             panelSeller.Visible = false;
-            panelReport.Visible = false;
         }
 
         private void hideMenu()
@@ -39,10 +38,6 @@ namespace Mobilephone
             if(panelSeller.Visible == true)
             {
                 panelSeller.Visible = false;
-            }
-            if(panelReport.Visible == true)
-            {
-                panelReport.Visible = false;
             }
 
         }
@@ -98,19 +93,29 @@ namespace Mobilephone
             btnsCustomer.BackColor = Color.RoyalBlue;
             btnsSeller.ForeColor = Color.White;
             btnsSeller.BackColor = Color.RoyalBlue;
-            btnrCustomer.ForeColor = Color.White;
-            btnrCustomer.BackColor = Color.RoyalBlue;
-            btnrImport.ForeColor = Color.White;
-            btnrImport.BackColor = Color.RoyalBlue;
-            btnrProduct.ForeColor = Color.White;
-            btnrProduct.BackColor = Color.RoyalBlue;
-            btnrSale.ForeColor = Color.White;
-            btnrSale.BackColor = Color.RoyalBlue;
+
+        }
+
+        private Form active;
+        private void loadForm(Form choin,object btnClick,Panel control)
+        {
+         if(active != null)
+            {
+                active.Close();
+            }
+            active = choin;
+            choin.TopLevel = false;
+            choin.FormBorderStyle = FormBorderStyle.None;
+            choin.Dock = DockStyle.Fill;
+            control.Controls.Add(choin);
+            control.Tag = choin;
+            choin.BringToFront();
+            choin.Show();
 
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            loadForm(new backgroup(), sender, panelSubform);
         }
 
         private void btnProduct_Click(object sender, EventArgs e)
@@ -126,16 +131,23 @@ namespace Mobilephone
         private void button3_Click(object sender, EventArgs e)
         {
             showColor(button3);
+            loadForm(new FormData.formProduct(), sender, panelSubform);
+
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             showColor(button4);
+            loadForm(new FormData.formSize(), sender, panelSubform);
+
         }
 
         private void btnpBrands_Click(object sender, EventArgs e)
         {
             showColor(btnpBrands);
+            loadForm(new FormData.formBrands(), sender, panelSubform);
+
+
         }
 
         private void btnSale_Click(object sender, EventArgs e)
@@ -146,71 +158,77 @@ namespace Mobilephone
         private void btnSeller_Click(object sender, EventArgs e)
         {
             hideMenu();
+            loadForm(new FormData.formStaff(), sender, panelSubform);
+
         }
 
         private void btnpColor_Click(object sender, EventArgs e)
         {
             showColor(btnpColor);
+            loadForm(new FormData.formColor(), sender, panelSubform);
+
         }
 
         private void btnpUnit_Click(object sender, EventArgs e)
         {
             showColor(btnpUnit);
+            loadForm(new FormData.formUnit(), sender, panelSubform);
+
         }
 
         private void btniOrder_Click(object sender, EventArgs e)
         {
             showColor(btniOrder);
+            loadForm(new FormData.formImportProduct(), sender, panelSubform);
+
         }
 
         private void btniStock_Click(object sender, EventArgs e)
         {
             showColor(btniStock);
+            loadForm(new FormData.formStockIN(), sender, panelSubform);
+
         }
 
         private void btniSupplier_Click(object sender, EventArgs e)
         {
             showColor(btniSupplier);
+            loadForm(new FormData.formSupplier(), sender, panelSubform);
+
         }
 
         private void btnsCustomer_Click(object sender, EventArgs e)
         {
             showColor(btnsCustomer);
+            loadForm(new FormData.formCustomer(), sender, panelSubform);
+
         }
 
         private void btnsSeller_Click(object sender, EventArgs e)
         {
             showColor(btnsSeller);
-        }
+            loadForm(new FormData.formProductsale(), sender, panelSubform);
 
-        private void btnrProduct_Click(object sender, EventArgs e)
-        {
-            showColor(btnrProduct);
-        }
-
-        private void btnrCustomer_Click(object sender, EventArgs e)
-        {
-            showColor(btnrCustomer);
-        }
-
-        private void btnrSale_Click(object sender, EventArgs e)
-        {
-            showColor(btnrSale);
-        }
-
-        private void btnrImport_Click(object sender, EventArgs e)
-        {
-            showColor(btnrImport);
         }
 
         private void btnReport_Click(object sender, EventArgs e)
         {
-            showMenu(panelReport);
+            hideMenu();
+            loadForm(new FormData.formReport(), sender, panelSubform);
+
         }
 
         private void btnHome_Click(object sender, EventArgs e)
         {
             hideMenu();
+            loadForm(new backgroup(), sender, panelSubform);
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            loadForm(new FormData.formDisplay(), sender, panelSubform);
+
         }
     }
 }

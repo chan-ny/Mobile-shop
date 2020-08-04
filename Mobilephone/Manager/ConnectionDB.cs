@@ -10,14 +10,15 @@ namespace Mobilephone.Manager
 {
     class ConnectionDB
     {
-        public static string URLS = @"Data Source=DESKTOP-FEIOFK2;Initial Catalog=DB;Integrated Security=True";
+        public static string URLS = @"Data Source=DESKTOP-FEIOFK2;Initial Catalog=DB2;Integrated Security=True";
         public static SqlConnection con;
         public static SqlCommand cmd;
         public static SqlDataAdapter dat;
         public static SqlDataReader dr;
-        public static DataSet ds;    
+        public static DataSet ds;
+        public static DataSetLoad dsl;
         public static string setDate = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-        public static string upDate = "0000-00-00 00:00:00";
+        public static string AddYear = "0000-00-00 00:00:00";
 
 
         public static void ConnectDB()

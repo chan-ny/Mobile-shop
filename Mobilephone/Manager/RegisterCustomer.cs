@@ -334,5 +334,35 @@ namespace Mobilephone.Manager
             }
         }
 
+        public static void ResearchID(string id, TextBox str)
+        {
+            try
+            {
+                ConnectDB();
+                sql = "select cusName from Customers where cusId=" + id;
+                cmd = new SqlCommand(sql, con);
+                dr = cmd.ExecuteReader();
+                dr.Read();
+                if (dr.HasRows)
+                {
+                    str.Text = dr["cusName"].ToString();
+                }
+
+                if (str.Text == "")
+                {
+                    MessageBox.Show("Customer no Registert");
+                    return;
+                }
+
+                dr.Close();
+            }
+            catch
+            {
+                MessageBox.Show("Customer no Registert");
+                return;
+            }
+            
+        }
+
     }
 }

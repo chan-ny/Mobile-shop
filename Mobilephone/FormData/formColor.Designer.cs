@@ -250,7 +250,6 @@
             this.txtCode.Name = "txtCode";
             this.txtCode.Size = new System.Drawing.Size(208, 31);
             this.txtCode.TabIndex = 1;
-            this.txtCode.Text = "1";
             // 
             // label1
             // 

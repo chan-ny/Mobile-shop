@@ -106,5 +106,10 @@ namespace Mobilephone.FormData
                 Manager.Size.searchData(dgvSize);
             }
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

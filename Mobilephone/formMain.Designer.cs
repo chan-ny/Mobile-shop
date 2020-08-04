@@ -30,47 +30,40 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formMain));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.panelMainMenu = new System.Windows.Forms.Panel();
+            this.btnReport = new System.Windows.Forms.Button();
+            this.btnSeller = new System.Windows.Forms.Button();
+            this.panelSeller = new System.Windows.Forms.Panel();
+            this.btnsSeller = new System.Windows.Forms.Button();
+            this.btnsCustomer = new System.Windows.Forms.Button();
+            this.btnSale = new System.Windows.Forms.Button();
             this.panelCustomer = new System.Windows.Forms.Panel();
+            this.btniSupplier = new System.Windows.Forms.Button();
             this.btniStock = new System.Windows.Forms.Button();
             this.btniOrder = new System.Windows.Forms.Button();
+            this.btnImport = new System.Windows.Forms.Button();
             this.panelProduct = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.btnpUnit = new System.Windows.Forms.Button();
             this.btnpColor = new System.Windows.Forms.Button();
             this.btnpBrands = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.panelSeller = new System.Windows.Forms.Panel();
-            this.btnsSeller = new System.Windows.Forms.Button();
-            this.btnsCustomer = new System.Windows.Forms.Button();
-            this.btniSupplier = new System.Windows.Forms.Button();
-            this.panelReport = new System.Windows.Forms.Panel();
-            this.btnrCustomer = new System.Windows.Forms.Button();
-            this.btnrProduct = new System.Windows.Forms.Button();
-            this.btnrSale = new System.Windows.Forms.Button();
-            this.btnrImport = new System.Windows.Forms.Button();
-            this.btnReport = new System.Windows.Forms.Button();
-            this.btnSeller = new System.Windows.Forms.Button();
-            this.btnSale = new System.Windows.Forms.Button();
-            this.btnImport = new System.Windows.Forms.Button();
             this.btnProduct = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.panelSubform = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panelMainMenu.SuspendLayout();
+            this.panelSeller.SuspendLayout();
             this.panelCustomer.SuspendLayout();
             this.panelProduct.SuspendLayout();
-            this.panelSeller.SuspendLayout();
-            this.panelReport.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -79,20 +72,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1362, 51);
             this.panel1.TabIndex = 0;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial Narrow", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(644, 11);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(177, 31);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "denlerimg from";
             // 
             // label1
             // 
@@ -105,11 +84,22 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Smart Mobile Phone";
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(3, 7);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(45, 35);
+            this.button1.TabIndex = 0;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // panelMainMenu
             // 
             this.panelMainMenu.BackColor = System.Drawing.Color.DodgerBlue;
             this.panelMainMenu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelMainMenu.Controls.Add(this.panelReport);
             this.panelMainMenu.Controls.Add(this.btnReport);
             this.panelMainMenu.Controls.Add(this.btnSeller);
             this.panelMainMenu.Controls.Add(this.panelSeller);
@@ -127,6 +117,125 @@
             this.panelMainMenu.Size = new System.Drawing.Size(212, 658);
             this.panelMainMenu.TabIndex = 1;
             // 
+            // btnReport
+            // 
+            this.btnReport.AllowDrop = true;
+            this.btnReport.AutoEllipsis = true;
+            this.btnReport.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnReport.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnReport.FlatAppearance.BorderSize = 0;
+            this.btnReport.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReport.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReport.Image = global::Mobilephone.Properties.Resources.circled_chevron_right_filled_30px;
+            this.btnReport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReport.Location = new System.Drawing.Point(0, 717);
+            this.btnReport.Name = "btnReport";
+            this.btnReport.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnReport.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnReport.Size = new System.Drawing.Size(210, 45);
+            this.btnReport.TabIndex = 10;
+            this.btnReport.Text = "  ລາຍງານ";
+            this.btnReport.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnReport.UseVisualStyleBackColor = false;
+            this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
+            // 
+            // btnSeller
+            // 
+            this.btnSeller.AllowDrop = true;
+            this.btnSeller.AutoEllipsis = true;
+            this.btnSeller.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnSeller.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSeller.FlatAppearance.BorderSize = 0;
+            this.btnSeller.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnSeller.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSeller.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeller.Image = global::Mobilephone.Properties.Resources.circled_chevron_right_filled_30px;
+            this.btnSeller.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSeller.Location = new System.Drawing.Point(0, 672);
+            this.btnSeller.Name = "btnSeller";
+            this.btnSeller.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnSeller.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnSeller.Size = new System.Drawing.Size(210, 45);
+            this.btnSeller.TabIndex = 8;
+            this.btnSeller.Text = "  ພະນັກງານຂາຍ";
+            this.btnSeller.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSeller.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSeller.UseVisualStyleBackColor = false;
+            this.btnSeller.Click += new System.EventHandler(this.btnSeller_Click);
+            // 
+            // panelSeller
+            // 
+            this.panelSeller.BackColor = System.Drawing.Color.RoyalBlue;
+            this.panelSeller.Controls.Add(this.btnsSeller);
+            this.panelSeller.Controls.Add(this.btnsCustomer);
+            this.panelSeller.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelSeller.Location = new System.Drawing.Point(0, 578);
+            this.panelSeller.Name = "panelSeller";
+            this.panelSeller.Size = new System.Drawing.Size(210, 94);
+            this.panelSeller.TabIndex = 6;
+            // 
+            // btnsSeller
+            // 
+            this.btnsSeller.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnsSeller.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnsSeller.FlatAppearance.BorderSize = 0;
+            this.btnsSeller.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnsSeller.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnsSeller.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnsSeller.Location = new System.Drawing.Point(0, 44);
+            this.btnsSeller.Name = "btnsSeller";
+            this.btnsSeller.Padding = new System.Windows.Forms.Padding(60, 0, 0, 0);
+            this.btnsSeller.Size = new System.Drawing.Size(210, 44);
+            this.btnsSeller.TabIndex = 1;
+            this.btnsSeller.Text = "ຂໍ້ມູນຂາຍສີນຄ້າ";
+            this.btnsSeller.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnsSeller.UseVisualStyleBackColor = false;
+            this.btnsSeller.Click += new System.EventHandler(this.btnsSeller_Click);
+            // 
+            // btnsCustomer
+            // 
+            this.btnsCustomer.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnsCustomer.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnsCustomer.FlatAppearance.BorderSize = 0;
+            this.btnsCustomer.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnsCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnsCustomer.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnsCustomer.Location = new System.Drawing.Point(0, 0);
+            this.btnsCustomer.Name = "btnsCustomer";
+            this.btnsCustomer.Padding = new System.Windows.Forms.Padding(60, 0, 0, 0);
+            this.btnsCustomer.Size = new System.Drawing.Size(210, 44);
+            this.btnsCustomer.TabIndex = 0;
+            this.btnsCustomer.Text = "ຂໍ້ມູນລູກຄ້າ";
+            this.btnsCustomer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnsCustomer.UseVisualStyleBackColor = false;
+            this.btnsCustomer.Click += new System.EventHandler(this.btnsCustomer_Click);
+            // 
+            // btnSale
+            // 
+            this.btnSale.AllowDrop = true;
+            this.btnSale.AutoEllipsis = true;
+            this.btnSale.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnSale.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSale.FlatAppearance.BorderSize = 0;
+            this.btnSale.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnSale.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSale.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSale.Image = global::Mobilephone.Properties.Resources.circled_chevron_right_filled_30px;
+            this.btnSale.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSale.Location = new System.Drawing.Point(0, 533);
+            this.btnSale.Name = "btnSale";
+            this.btnSale.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnSale.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnSale.Size = new System.Drawing.Size(210, 45);
+            this.btnSale.TabIndex = 7;
+            this.btnSale.Text = "  ຂໍ້ມູນການຂາຍສີນຄ້າ";
+            this.btnSale.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSale.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSale.UseVisualStyleBackColor = false;
+            this.btnSale.Click += new System.EventHandler(this.btnSale_Click);
+            // 
             // panelCustomer
             // 
             this.panelCustomer.BackColor = System.Drawing.Color.RoyalBlue;
@@ -134,10 +243,28 @@
             this.panelCustomer.Controls.Add(this.btniStock);
             this.panelCustomer.Controls.Add(this.btniOrder);
             this.panelCustomer.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelCustomer.Location = new System.Drawing.Point(0, 353);
+            this.panelCustomer.Location = new System.Drawing.Point(0, 395);
             this.panelCustomer.Name = "panelCustomer";
-            this.panelCustomer.Size = new System.Drawing.Size(210, 131);
+            this.panelCustomer.Size = new System.Drawing.Size(210, 138);
             this.panelCustomer.TabIndex = 4;
+            // 
+            // btniSupplier
+            // 
+            this.btniSupplier.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btniSupplier.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btniSupplier.FlatAppearance.BorderSize = 0;
+            this.btniSupplier.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btniSupplier.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btniSupplier.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btniSupplier.Location = new System.Drawing.Point(0, 88);
+            this.btniSupplier.Name = "btniSupplier";
+            this.btniSupplier.Padding = new System.Windows.Forms.Padding(60, 0, 0, 0);
+            this.btniSupplier.Size = new System.Drawing.Size(210, 44);
+            this.btniSupplier.TabIndex = 2;
+            this.btniSupplier.Text = "ຜູ້ສະໜອງ";
+            this.btniSupplier.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btniSupplier.UseVisualStyleBackColor = false;
+            this.btniSupplier.Click += new System.EventHandler(this.btniSupplier_Click);
             // 
             // btniStock
             // 
@@ -175,9 +302,34 @@
             this.btniOrder.UseVisualStyleBackColor = false;
             this.btniOrder.Click += new System.EventHandler(this.btniOrder_Click);
             // 
+            // btnImport
+            // 
+            this.btnImport.AllowDrop = true;
+            this.btnImport.AutoEllipsis = true;
+            this.btnImport.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnImport.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnImport.FlatAppearance.BorderSize = 0;
+            this.btnImport.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnImport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnImport.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImport.Image = global::Mobilephone.Properties.Resources.circled_chevron_right_filled_30px;
+            this.btnImport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnImport.Location = new System.Drawing.Point(0, 350);
+            this.btnImport.Name = "btnImport";
+            this.btnImport.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnImport.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnImport.Size = new System.Drawing.Size(210, 45);
+            this.btnImport.TabIndex = 5;
+            this.btnImport.Text = "  ສີນຄ້ານຳເຂົ້າ";
+            this.btnImport.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnImport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnImport.UseVisualStyleBackColor = false;
+            this.btnImport.Click += new System.EventHandler(this.btnCustomer_Click);
+            // 
             // panelProduct
             // 
             this.panelProduct.BackColor = System.Drawing.Color.RoyalBlue;
+            this.panelProduct.Controls.Add(this.button2);
             this.panelProduct.Controls.Add(this.btnpUnit);
             this.panelProduct.Controls.Add(this.btnpColor);
             this.panelProduct.Controls.Add(this.btnpBrands);
@@ -186,8 +338,27 @@
             this.panelProduct.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelProduct.Location = new System.Drawing.Point(0, 90);
             this.panelProduct.Name = "panelProduct";
-            this.panelProduct.Size = new System.Drawing.Size(210, 218);
+            this.panelProduct.Size = new System.Drawing.Size(210, 260);
             this.panelProduct.TabIndex = 2;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.RoyalBlue;
+            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(0, 213);
+            this.button2.Name = "button2";
+            this.button2.Padding = new System.Windows.Forms.Padding(60, 0, 0, 0);
+            this.button2.Size = new System.Drawing.Size(210, 37);
+            this.button2.TabIndex = 5;
+            this.button2.Text = "ຂະໜາດຈໍ";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnpUnit
             // 
@@ -286,252 +457,6 @@
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // panelSeller
-            // 
-            this.panelSeller.BackColor = System.Drawing.Color.RoyalBlue;
-            this.panelSeller.Controls.Add(this.btnsSeller);
-            this.panelSeller.Controls.Add(this.btnsCustomer);
-            this.panelSeller.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSeller.Location = new System.Drawing.Point(0, 529);
-            this.panelSeller.Name = "panelSeller";
-            this.panelSeller.Size = new System.Drawing.Size(210, 94);
-            this.panelSeller.TabIndex = 6;
-            // 
-            // btnsSeller
-            // 
-            this.btnsSeller.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnsSeller.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnsSeller.FlatAppearance.BorderSize = 0;
-            this.btnsSeller.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnsSeller.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnsSeller.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnsSeller.Location = new System.Drawing.Point(0, 44);
-            this.btnsSeller.Name = "btnsSeller";
-            this.btnsSeller.Padding = new System.Windows.Forms.Padding(60, 0, 0, 0);
-            this.btnsSeller.Size = new System.Drawing.Size(210, 44);
-            this.btnsSeller.TabIndex = 1;
-            this.btnsSeller.Text = "ຂໍ້ມູນຂາຍສີນຄ້າ";
-            this.btnsSeller.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnsSeller.UseVisualStyleBackColor = false;
-            this.btnsSeller.Click += new System.EventHandler(this.btnsSeller_Click);
-            // 
-            // btnsCustomer
-            // 
-            this.btnsCustomer.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnsCustomer.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnsCustomer.FlatAppearance.BorderSize = 0;
-            this.btnsCustomer.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnsCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnsCustomer.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnsCustomer.Location = new System.Drawing.Point(0, 0);
-            this.btnsCustomer.Name = "btnsCustomer";
-            this.btnsCustomer.Padding = new System.Windows.Forms.Padding(60, 0, 0, 0);
-            this.btnsCustomer.Size = new System.Drawing.Size(210, 44);
-            this.btnsCustomer.TabIndex = 0;
-            this.btnsCustomer.Text = "ຂໍ້ມູນລູກຄ້າ";
-            this.btnsCustomer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnsCustomer.UseVisualStyleBackColor = false;
-            this.btnsCustomer.Click += new System.EventHandler(this.btnsCustomer_Click);
-            // 
-            // btniSupplier
-            // 
-            this.btniSupplier.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btniSupplier.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btniSupplier.FlatAppearance.BorderSize = 0;
-            this.btniSupplier.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btniSupplier.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btniSupplier.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btniSupplier.Location = new System.Drawing.Point(0, 88);
-            this.btniSupplier.Name = "btniSupplier";
-            this.btniSupplier.Padding = new System.Windows.Forms.Padding(60, 0, 0, 0);
-            this.btniSupplier.Size = new System.Drawing.Size(210, 44);
-            this.btniSupplier.TabIndex = 2;
-            this.btniSupplier.Text = "ຜູ້ສະໜອງ";
-            this.btniSupplier.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btniSupplier.UseVisualStyleBackColor = false;
-            this.btniSupplier.Click += new System.EventHandler(this.btniSupplier_Click);
-            // 
-            // panelReport
-            // 
-            this.panelReport.BackColor = System.Drawing.Color.RoyalBlue;
-            this.panelReport.Controls.Add(this.btnrImport);
-            this.panelReport.Controls.Add(this.btnrSale);
-            this.panelReport.Controls.Add(this.btnrCustomer);
-            this.panelReport.Controls.Add(this.btnrProduct);
-            this.panelReport.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelReport.Location = new System.Drawing.Point(0, 713);
-            this.panelReport.Name = "panelReport";
-            this.panelReport.Size = new System.Drawing.Size(210, 175);
-            this.panelReport.TabIndex = 9;
-            // 
-            // btnrCustomer
-            // 
-            this.btnrCustomer.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnrCustomer.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnrCustomer.FlatAppearance.BorderSize = 0;
-            this.btnrCustomer.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnrCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnrCustomer.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnrCustomer.Location = new System.Drawing.Point(0, 44);
-            this.btnrCustomer.Name = "btnrCustomer";
-            this.btnrCustomer.Padding = new System.Windows.Forms.Padding(60, 0, 0, 0);
-            this.btnrCustomer.Size = new System.Drawing.Size(210, 44);
-            this.btnrCustomer.TabIndex = 1;
-            this.btnrCustomer.Text = "ລາຍງານຂໍ້ມູນລູກຄ້າ";
-            this.btnrCustomer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnrCustomer.UseVisualStyleBackColor = false;
-            this.btnrCustomer.Click += new System.EventHandler(this.btnrCustomer_Click);
-            // 
-            // btnrProduct
-            // 
-            this.btnrProduct.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnrProduct.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnrProduct.FlatAppearance.BorderSize = 0;
-            this.btnrProduct.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnrProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnrProduct.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnrProduct.Location = new System.Drawing.Point(0, 0);
-            this.btnrProduct.Name = "btnrProduct";
-            this.btnrProduct.Padding = new System.Windows.Forms.Padding(60, 0, 0, 0);
-            this.btnrProduct.Size = new System.Drawing.Size(210, 44);
-            this.btnrProduct.TabIndex = 0;
-            this.btnrProduct.Text = "ລາຍງານຂໍ້ມູນສີນຄ້າ";
-            this.btnrProduct.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnrProduct.UseVisualStyleBackColor = false;
-            this.btnrProduct.Click += new System.EventHandler(this.btnrProduct_Click);
-            // 
-            // btnrSale
-            // 
-            this.btnrSale.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnrSale.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnrSale.FlatAppearance.BorderSize = 0;
-            this.btnrSale.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnrSale.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnrSale.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnrSale.Location = new System.Drawing.Point(0, 88);
-            this.btnrSale.Name = "btnrSale";
-            this.btnrSale.Padding = new System.Windows.Forms.Padding(60, 0, 0, 0);
-            this.btnrSale.Size = new System.Drawing.Size(210, 44);
-            this.btnrSale.TabIndex = 2;
-            this.btnrSale.Text = "ລາຍງານຂໍ້ມູນຂາຍສີນຄ້າ";
-            this.btnrSale.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnrSale.UseVisualStyleBackColor = false;
-            this.btnrSale.Click += new System.EventHandler(this.btnrSale_Click);
-            // 
-            // btnrImport
-            // 
-            this.btnrImport.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnrImport.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnrImport.FlatAppearance.BorderSize = 0;
-            this.btnrImport.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnrImport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnrImport.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnrImport.Location = new System.Drawing.Point(0, 132);
-            this.btnrImport.Name = "btnrImport";
-            this.btnrImport.Padding = new System.Windows.Forms.Padding(60, 0, 0, 0);
-            this.btnrImport.Size = new System.Drawing.Size(210, 44);
-            this.btnrImport.TabIndex = 3;
-            this.btnrImport.Text = "ລາຍງານຂໍ້ມູນນຳເຂົາສີນຄ້າ";
-            this.btnrImport.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnrImport.UseVisualStyleBackColor = false;
-            this.btnrImport.Click += new System.EventHandler(this.btnrImport_Click);
-            // 
-            // btnReport
-            // 
-            this.btnReport.AllowDrop = true;
-            this.btnReport.AutoEllipsis = true;
-            this.btnReport.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnReport.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnReport.FlatAppearance.BorderSize = 0;
-            this.btnReport.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReport.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReport.Image = global::Mobilephone.Properties.Resources.circled_chevron_right_filled_30px;
-            this.btnReport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReport.Location = new System.Drawing.Point(0, 668);
-            this.btnReport.Name = "btnReport";
-            this.btnReport.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnReport.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnReport.Size = new System.Drawing.Size(210, 45);
-            this.btnReport.TabIndex = 10;
-            this.btnReport.Text = "  ລາຍງານ";
-            this.btnReport.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnReport.UseVisualStyleBackColor = false;
-            this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
-            // 
-            // btnSeller
-            // 
-            this.btnSeller.AllowDrop = true;
-            this.btnSeller.AutoEllipsis = true;
-            this.btnSeller.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnSeller.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSeller.FlatAppearance.BorderSize = 0;
-            this.btnSeller.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnSeller.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSeller.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSeller.Image = global::Mobilephone.Properties.Resources.circled_chevron_right_filled_30px;
-            this.btnSeller.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSeller.Location = new System.Drawing.Point(0, 623);
-            this.btnSeller.Name = "btnSeller";
-            this.btnSeller.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnSeller.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnSeller.Size = new System.Drawing.Size(210, 45);
-            this.btnSeller.TabIndex = 8;
-            this.btnSeller.Text = "  ພະນັກງານຂາຍ";
-            this.btnSeller.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSeller.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSeller.UseVisualStyleBackColor = false;
-            this.btnSeller.Click += new System.EventHandler(this.btnSeller_Click);
-            // 
-            // btnSale
-            // 
-            this.btnSale.AllowDrop = true;
-            this.btnSale.AutoEllipsis = true;
-            this.btnSale.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnSale.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSale.FlatAppearance.BorderSize = 0;
-            this.btnSale.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnSale.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSale.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSale.Image = global::Mobilephone.Properties.Resources.circled_chevron_right_filled_30px;
-            this.btnSale.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSale.Location = new System.Drawing.Point(0, 484);
-            this.btnSale.Name = "btnSale";
-            this.btnSale.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnSale.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnSale.Size = new System.Drawing.Size(210, 45);
-            this.btnSale.TabIndex = 7;
-            this.btnSale.Text = "  ຂໍ້ມູນການຂາຍສີນຄ້າ";
-            this.btnSale.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSale.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSale.UseVisualStyleBackColor = false;
-            this.btnSale.Click += new System.EventHandler(this.btnSale_Click);
-            // 
-            // btnImport
-            // 
-            this.btnImport.AllowDrop = true;
-            this.btnImport.AutoEllipsis = true;
-            this.btnImport.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnImport.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnImport.FlatAppearance.BorderSize = 0;
-            this.btnImport.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnImport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnImport.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnImport.Image = global::Mobilephone.Properties.Resources.circled_chevron_right_filled_30px;
-            this.btnImport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnImport.Location = new System.Drawing.Point(0, 308);
-            this.btnImport.Name = "btnImport";
-            this.btnImport.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnImport.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnImport.Size = new System.Drawing.Size(210, 45);
-            this.btnImport.TabIndex = 5;
-            this.btnImport.Text = "  ສີນຄ້ານຳເຂົ້າ";
-            this.btnImport.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnImport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnImport.UseVisualStyleBackColor = false;
-            this.btnImport.Click += new System.EventHandler(this.btnCustomer_Click);
-            // 
             // btnProduct
             // 
             this.btnProduct.AllowDrop = true;
@@ -581,18 +506,6 @@
             this.btnHome.UseVisualStyleBackColor = false;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(3, 7);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(45, 35);
-            this.button1.TabIndex = 0;
-            this.button1.UseVisualStyleBackColor = false;
-            // 
             // panelSubform
             // 
             this.panelSubform.BackColor = System.Drawing.Color.White;
@@ -602,7 +515,7 @@
             this.panelSubform.Size = new System.Drawing.Size(1150, 658);
             this.panelSubform.TabIndex = 2;
             // 
-            // Form1
+            // formMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -612,17 +525,16 @@
             this.Controls.Add(this.panelMainMenu);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Form1";
+            this.Name = "formMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panelMainMenu.ResumeLayout(false);
+            this.panelSeller.ResumeLayout(false);
             this.panelCustomer.ResumeLayout(false);
             this.panelProduct.ResumeLayout(false);
-            this.panelSeller.ResumeLayout(false);
-            this.panelReport.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -632,7 +544,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panelMainMenu;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.Panel panelCustomer;
@@ -646,11 +557,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button btnProduct;
-        private System.Windows.Forms.Panel panelReport;
-        private System.Windows.Forms.Button btnrImport;
-        private System.Windows.Forms.Button btnrSale;
-        private System.Windows.Forms.Button btnrCustomer;
-        private System.Windows.Forms.Button btnrProduct;
         private System.Windows.Forms.Button btnReport;
         private System.Windows.Forms.Button btnSeller;
         private System.Windows.Forms.Panel panelSeller;
@@ -659,6 +565,7 @@
         private System.Windows.Forms.Button btnSale;
         private System.Windows.Forms.Button btniSupplier;
         private System.Windows.Forms.Panel panelSubform;
+        private System.Windows.Forms.Button button2;
     }
 }
 

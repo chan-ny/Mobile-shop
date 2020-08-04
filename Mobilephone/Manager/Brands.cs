@@ -212,9 +212,10 @@ namespace Mobilephone.Manager
                     }
                 }
             }
-            catch (Exception e)
+            catch
             {
-                MessageBox.Show(e.Message);
+                MessageBox.Show("Can not Record Value.... please Delete Supplier before");
+                return;
             }
 
         }

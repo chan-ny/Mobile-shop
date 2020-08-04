@@ -30,6 +30,7 @@
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbsubID = new System.Windows.Forms.TextBox();
             this.txtCustomer = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.txtNumber = new System.Windows.Forms.NumericUpDown();
@@ -54,7 +55,7 @@
             this.lbMoney = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel7 = new System.Windows.Forms.Panel();
             this.lbTitleNamePhone = new System.Windows.Forms.Label();
             this.lbLaunch = new System.Windows.Forms.Label();
             this.lbOS = new System.Windows.Forms.Label();
@@ -64,7 +65,7 @@
             this.lbBattery = new System.Windows.Forms.Label();
             this.lbChipset = new System.Windows.Forms.Label();
             this.lbRam = new System.Windows.Forms.Label();
-            this.lbframeCamera = new System.Windows.Forms.Label();
+            this.lbfronVideo = new System.Windows.Forms.Label();
             this.lbfrontCamera = new System.Windows.Forms.Label();
             this.lbsreenRelution = new System.Windows.Forms.Label();
             this.lbSreenSize = new System.Windows.Forms.Label();
@@ -86,17 +87,19 @@
             this.btnPayment = new System.Windows.Forms.Button();
             this.btnCancelOrder = new System.Windows.Forms.Button();
             this.btnOpenCustomer = new System.Windows.Forms.Button();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.dgvSale = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtNumber)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.flowLayoutPanel2.SuspendLayout();
+            this.panel7.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataPicturePhone)).BeginInit();
             this.panel4.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
+            this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSale)).BeginInit();
             this.SuspendLayout();
             // 
@@ -110,7 +113,7 @@
             this.tableLayoutPanel1.Controls.Add(this.panel3, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.panel4, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel1, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.dgvSale, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.panel6, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -118,12 +121,13 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 21.36628F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 78.63372F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 93F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1362, 709);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1354, 709);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Silver;
+            this.panel1.Controls.Add(this.lbsubID);
             this.panel1.Controls.Add(this.txtCustomer);
             this.panel1.Controls.Add(this.label22);
             this.panel1.Controls.Add(this.txtNumber);
@@ -145,16 +149,28 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(978, 125);
+            this.panel1.Size = new System.Drawing.Size(972, 125);
             this.panel1.TabIndex = 0;
+            // 
+            // lbsubID
+            // 
+            this.lbsubID.BackColor = System.Drawing.Color.Silver;
+            this.lbsubID.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lbsubID.ForeColor = System.Drawing.Color.Silver;
+            this.lbsubID.Location = new System.Drawing.Point(240, 11);
+            this.lbsubID.Name = "lbsubID";
+            this.lbsubID.Size = new System.Drawing.Size(10, 13);
+            this.lbsubID.TabIndex = 7;
             // 
             // txtCustomer
             // 
+            this.txtCustomer.Enabled = false;
             this.txtCustomer.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCustomer.Location = new System.Drawing.Point(124, 87);
             this.txtCustomer.Name = "txtCustomer";
             this.txtCustomer.Size = new System.Drawing.Size(168, 31);
             this.txtCustomer.TabIndex = 6;
+            this.txtCustomer.TextChanged += new System.EventHandler(this.txtCustomer_TextChanged);
             // 
             // label22
             // 
@@ -169,6 +185,7 @@
             // 
             // txtNumber
             // 
+            this.txtNumber.Enabled = false;
             this.txtNumber.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNumber.Location = new System.Drawing.Point(762, 11);
             this.txtNumber.Maximum = new decimal(new int[] {
@@ -196,21 +213,22 @@
             // 
             // txtAmount
             // 
+            this.txtAmount.Enabled = false;
             this.txtAmount.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAmount.Location = new System.Drawing.Point(762, 83);
             this.txtAmount.Name = "txtAmount";
             this.txtAmount.Size = new System.Drawing.Size(186, 31);
             this.txtAmount.TabIndex = 1;
-            this.txtAmount.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // txtPrice
             // 
+            this.txtPrice.Enabled = false;
             this.txtPrice.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPrice.Location = new System.Drawing.Point(762, 46);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(186, 31);
             this.txtPrice.TabIndex = 1;
-            this.txtPrice.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.txtPrice.TextChanged += new System.EventHandler(this.txtPrice_TextChanged);
             // 
             // label29
             // 
@@ -225,34 +243,41 @@
             // 
             // txtUnit
             // 
+            this.txtUnit.Enabled = false;
             this.txtUnit.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUnit.Location = new System.Drawing.Point(441, 87);
+            this.txtUnit.Location = new System.Drawing.Point(440, 45);
             this.txtUnit.Name = "txtUnit";
             this.txtUnit.Size = new System.Drawing.Size(215, 31);
             this.txtUnit.TabIndex = 1;
             // 
             // txtProductName
             // 
+            this.txtProductName.Enabled = false;
             this.txtProductName.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtProductName.Location = new System.Drawing.Point(441, 50);
+            this.txtProductName.Location = new System.Drawing.Point(440, 12);
             this.txtProductName.Name = "txtProductName";
             this.txtProductName.Size = new System.Drawing.Size(215, 31);
             this.txtProductName.TabIndex = 1;
             // 
             // txtCodeProduct
             // 
-            this.txtCodeProduct.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodeProduct.Location = new System.Drawing.Point(441, 10);
+            this.txtCodeProduct.BackColor = System.Drawing.Color.PowderBlue;
+            this.txtCodeProduct.Font = new System.Drawing.Font("Phetsarath OT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodeProduct.ForeColor = System.Drawing.Color.Black;
+            this.txtCodeProduct.Location = new System.Drawing.Point(440, 79);
             this.txtCodeProduct.Name = "txtCodeProduct";
-            this.txtCodeProduct.Size = new System.Drawing.Size(110, 31);
+            this.txtCodeProduct.Size = new System.Drawing.Size(215, 35);
             this.txtCodeProduct.TabIndex = 1;
+            this.txtCodeProduct.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtCodeProduct.TextChanged += new System.EventHandler(this.txtCodeProduct_TextChanged);
+            this.txtCodeProduct.Leave += new System.EventHandler(this.txtCodeProduct_Leave);
             // 
             // label26
             // 
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Phetsarath OT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label26.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label26.Location = new System.Drawing.Point(308, 87);
+            this.label26.Location = new System.Drawing.Point(307, 44);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(127, 27);
             this.label26.TabIndex = 0;
@@ -282,7 +307,7 @@
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Phetsarath OT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label25.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label25.Location = new System.Drawing.Point(361, 50);
+            this.label25.Location = new System.Drawing.Point(360, 12);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(74, 27);
             this.label25.TabIndex = 0;
@@ -315,7 +340,7 @@
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Phetsarath OT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label24.Location = new System.Drawing.Point(330, 10);
+            this.label24.Location = new System.Drawing.Point(329, 83);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(105, 27);
             this.label24.TabIndex = 0;
@@ -340,9 +365,9 @@
             this.panel2.Controls.Add(this.lbMoney);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(987, 3);
+            this.panel2.Location = new System.Drawing.Point(981, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(372, 125);
+            this.panel2.Size = new System.Drawing.Size(370, 125);
             this.panel2.TabIndex = 1;
             // 
             // lbSenMoney
@@ -355,7 +380,6 @@
             this.lbSenMoney.Size = new System.Drawing.Size(195, 47);
             this.lbSenMoney.TabIndex = 0;
             this.lbSenMoney.Text = "100,000";
-            this.lbSenMoney.Click += new System.EventHandler(this.label3_Click);
             // 
             // label5
             // 
@@ -377,8 +401,8 @@
             this.lbMoney.Name = "lbMoney";
             this.lbMoney.Size = new System.Drawing.Size(195, 47);
             this.lbMoney.TabIndex = 0;
-            this.lbMoney.Text = "100,000";
-            this.lbMoney.Click += new System.EventHandler(this.label3_Click);
+            this.lbMoney.Text = "100000";
+            this.lbMoney.TextChanged += new System.EventHandler(this.lbMoney_TextChanged);
             // 
             // label1
             // 
@@ -394,37 +418,35 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.LightGray;
-            this.panel3.Controls.Add(this.flowLayoutPanel2);
+            this.panel3.Controls.Add(this.panel7);
             this.panel3.Controls.Add(this.panel5);
             this.panel3.Controls.Add(this.dataPicturePhone);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(987, 134);
+            this.panel3.Location = new System.Drawing.Point(981, 134);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(372, 478);
+            this.panel3.Size = new System.Drawing.Size(370, 478);
             this.panel3.TabIndex = 2;
             // 
-            // flowLayoutPanel2
+            // panel7
             // 
-            this.flowLayoutPanel2.Controls.Add(this.lbTitleNamePhone);
-            this.flowLayoutPanel2.Controls.Add(this.lbLaunch);
-            this.flowLayoutPanel2.Controls.Add(this.lbOS);
-            this.flowLayoutPanel2.Controls.Add(this.lbCPU);
-            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 292);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Padding = new System.Windows.Forms.Padding(10);
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(372, 186);
-            this.flowLayoutPanel2.TabIndex = 2;
+            this.panel7.Controls.Add(this.lbTitleNamePhone);
+            this.panel7.Controls.Add(this.lbLaunch);
+            this.panel7.Controls.Add(this.lbOS);
+            this.panel7.Controls.Add(this.lbCPU);
+            this.panel7.Location = new System.Drawing.Point(3, 292);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(366, 183);
+            this.panel7.TabIndex = 2;
             // 
             // lbTitleNamePhone
             // 
             this.lbTitleNamePhone.AutoSize = true;
             this.lbTitleNamePhone.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTitleNamePhone.Location = new System.Drawing.Point(13, 10);
+            this.lbTitleNamePhone.Location = new System.Drawing.Point(20, 15);
             this.lbTitleNamePhone.Name = "lbTitleNamePhone";
             this.lbTitleNamePhone.Padding = new System.Windows.Forms.Padding(5);
             this.lbTitleNamePhone.Size = new System.Drawing.Size(245, 42);
-            this.lbTitleNamePhone.TabIndex = 3;
+            this.lbTitleNamePhone.TabIndex = 4;
             this.lbTitleNamePhone.Text = "Apple IPhone SE";
             this.lbTitleNamePhone.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -432,11 +454,11 @@
             // 
             this.lbLaunch.AutoSize = true;
             this.lbLaunch.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbLaunch.Location = new System.Drawing.Point(13, 52);
+            this.lbLaunch.Location = new System.Drawing.Point(20, 57);
             this.lbLaunch.Name = "lbLaunch";
             this.lbLaunch.Padding = new System.Windows.Forms.Padding(5);
             this.lbLaunch.Size = new System.Drawing.Size(240, 32);
-            this.lbLaunch.TabIndex = 3;
+            this.lbLaunch.TabIndex = 5;
             this.lbLaunch.Text = "Launch: 2016, Match 21";
             this.lbLaunch.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -444,11 +466,11 @@
             // 
             this.lbOS.AutoSize = true;
             this.lbOS.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbOS.Location = new System.Drawing.Point(13, 84);
+            this.lbOS.Location = new System.Drawing.Point(20, 89);
             this.lbOS.Name = "lbOS";
             this.lbOS.Padding = new System.Windows.Forms.Padding(5);
             this.lbOS.Size = new System.Drawing.Size(245, 32);
-            this.lbOS.TabIndex = 3;
+            this.lbOS.TabIndex = 6;
             this.lbOS.Text = "OS: IOS 9.3.2 to IOS 13.5";
             this.lbOS.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -456,11 +478,11 @@
             // 
             this.lbCPU.AutoSize = true;
             this.lbCPU.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCPU.Location = new System.Drawing.Point(13, 116);
+            this.lbCPU.Location = new System.Drawing.Point(20, 121);
             this.lbCPU.Name = "lbCPU";
             this.lbCPU.Padding = new System.Windows.Forms.Padding(5);
             this.lbCPU.Size = new System.Drawing.Size(248, 32);
-            this.lbCPU.TabIndex = 3;
+            this.lbCPU.TabIndex = 7;
             this.lbCPU.Text = "CPU: Dual-core 1.84 GHz";
             this.lbCPU.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -471,7 +493,7 @@
             this.panel5.Controls.Add(this.lbBattery);
             this.panel5.Controls.Add(this.lbChipset);
             this.panel5.Controls.Add(this.lbRam);
-            this.panel5.Controls.Add(this.lbframeCamera);
+            this.panel5.Controls.Add(this.lbfronVideo);
             this.panel5.Controls.Add(this.lbfrontCamera);
             this.panel5.Controls.Add(this.lbsreenRelution);
             this.panel5.Controls.Add(this.lbSreenSize);
@@ -529,16 +551,16 @@
             this.lbRam.TabIndex = 1;
             this.lbRam.Text = "2 GB RAM";
             // 
-            // lbframeCamera
+            // lbfronVideo
             // 
-            this.lbframeCamera.AutoSize = true;
-            this.lbframeCamera.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbframeCamera.ForeColor = System.Drawing.Color.White;
-            this.lbframeCamera.Location = new System.Drawing.Point(55, 101);
-            this.lbframeCamera.Name = "lbframeCamera";
-            this.lbframeCamera.Size = new System.Drawing.Size(43, 16);
-            this.lbframeCamera.TabIndex = 1;
-            this.lbframeCamera.Text = "2160p";
+            this.lbfronVideo.AutoSize = true;
+            this.lbfronVideo.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbfronVideo.ForeColor = System.Drawing.Color.White;
+            this.lbfronVideo.Location = new System.Drawing.Point(55, 101);
+            this.lbfronVideo.Name = "lbfronVideo";
+            this.lbfronVideo.Size = new System.Drawing.Size(43, 16);
+            this.lbfronVideo.TabIndex = 1;
+            this.lbfronVideo.Text = "2160p";
             // 
             // lbfrontCamera
             // 
@@ -611,6 +633,7 @@
             this.dataPicturePhone.Location = new System.Drawing.Point(3, 3);
             this.dataPicturePhone.Name = "dataPicturePhone";
             this.dataPicturePhone.Size = new System.Drawing.Size(191, 283);
+            this.dataPicturePhone.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.dataPicturePhone.TabIndex = 0;
             this.dataPicturePhone.TabStop = false;
             // 
@@ -628,11 +651,12 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(3, 618);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(978, 88);
+            this.panel4.Size = new System.Drawing.Size(972, 88);
             this.panel4.TabIndex = 3;
             // 
             // txtAmountMoney
             // 
+            this.txtAmountMoney.Enabled = false;
             this.txtAmountMoney.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAmountMoney.Location = new System.Drawing.Point(148, 48);
             this.txtAmountMoney.Name = "txtAmountMoney";
@@ -655,11 +679,10 @@
             this.lbDateSuport.AutoSize = true;
             this.lbDateSuport.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbDateSuport.ForeColor = System.Drawing.Color.DarkCyan;
-            this.lbDateSuport.Location = new System.Drawing.Point(730, 48);
+            this.lbDateSuport.Location = new System.Drawing.Point(727, 47);
             this.lbDateSuport.Name = "lbDateSuport";
-            this.lbDateSuport.Size = new System.Drawing.Size(197, 23);
+            this.lbDateSuport.Size = new System.Drawing.Size(0, 23);
             this.lbDateSuport.TabIndex = 2;
-            this.lbDateSuport.Text = "10-02-2020 to 10-02-2021";
             // 
             // label34
             // 
@@ -674,13 +697,16 @@
             // 
             // txtMoney
             // 
+            this.txtMoney.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.txtMoney.Font = new System.Drawing.Font("Phetsarath OT", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMoney.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.txtMoney.ForeColor = System.Drawing.Color.Black;
             this.txtMoney.Location = new System.Drawing.Point(366, 35);
             this.txtMoney.Name = "txtMoney";
             this.txtMoney.Size = new System.Drawing.Size(253, 47);
             this.txtMoney.TabIndex = 3;
             this.txtMoney.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtMoney.TextChanged += new System.EventHandler(this.txtMoney_TextChanged);
+            this.txtMoney.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtMoney_KeyDown);
             // 
             // label33
             // 
@@ -695,6 +721,7 @@
             // 
             // txtListOrder
             // 
+            this.txtListOrder.Enabled = false;
             this.txtListOrder.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtListOrder.Location = new System.Drawing.Point(148, 5);
             this.txtListOrder.Name = "txtListOrder";
@@ -719,9 +746,9 @@
             this.flowLayoutPanel1.Controls.Add(this.btnCancelOrder);
             this.flowLayoutPanel1.Controls.Add(this.btnOpenCustomer);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(987, 618);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(981, 618);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(372, 88);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(370, 88);
             this.flowLayoutPanel1.TabIndex = 4;
             // 
             // btnPayment
@@ -735,6 +762,7 @@
             this.btnPayment.TabIndex = 0;
             this.btnPayment.Text = "ຈ່າຍເງີນ";
             this.btnPayment.UseVisualStyleBackColor = false;
+            this.btnPayment.Click += new System.EventHandler(this.btnPayment_Click);
             // 
             // btnCancelOrder
             // 
@@ -747,6 +775,7 @@
             this.btnCancelOrder.TabIndex = 0;
             this.btnCancelOrder.Text = "ຍົກເລີກການຊື່";
             this.btnCancelOrder.UseVisualStyleBackColor = false;
+            this.btnCancelOrder.Click += new System.EventHandler(this.btnCancelOrder_Click);
             // 
             // btnOpenCustomer
             // 
@@ -761,25 +790,38 @@
             this.btnOpenCustomer.UseVisualStyleBackColor = false;
             this.btnOpenCustomer.Click += new System.EventHandler(this.button3_Click);
             // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.dgvSale);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel6.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel6.Location = new System.Drawing.Point(3, 134);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(972, 478);
+            this.panel6.TabIndex = 5;
+            // 
             // dgvSale
             // 
             this.dgvSale.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dgvSale.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSale.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvSale.Location = new System.Drawing.Point(3, 134);
+            this.dgvSale.Location = new System.Drawing.Point(0, 0);
             this.dgvSale.Name = "dgvSale";
-            this.dgvSale.Size = new System.Drawing.Size(978, 478);
-            this.dgvSale.TabIndex = 5;
+            this.dgvSale.Size = new System.Drawing.Size(972, 478);
+            this.dgvSale.TabIndex = 6;
+            this.dgvSale.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSale_CellClick);
+            this.dgvSale.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dgvSale_RowsAdded);
             // 
             // formSale
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1362, 709);
+            this.ClientSize = new System.Drawing.Size(1354, 709);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "formSale";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
+            this.Load += new System.EventHandler(this.formSale_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -787,14 +829,15 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
-            this.flowLayoutPanel2.ResumeLayout(false);
-            this.flowLayoutPanel2.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataPicturePhone)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSale)).EndInit();
             this.ResumeLayout(false);
 
@@ -809,9 +852,7 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Button btnPayment;
-        private System.Windows.Forms.DataGridView dgvSale;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lbMoney;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lbSenMoney;
         private System.Windows.Forms.Label label5;
@@ -825,15 +866,10 @@
         private System.Windows.Forms.Label lbBattery;
         private System.Windows.Forms.Label lbChipset;
         private System.Windows.Forms.Label lbRam;
-        private System.Windows.Forms.Label lbframeCamera;
+        private System.Windows.Forms.Label lbfronVideo;
         private System.Windows.Forms.Label lbfrontCamera;
         private System.Windows.Forms.Label lbsreenRelution;
         private System.Windows.Forms.Label lbSreenSize;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
-        private System.Windows.Forms.Label lbTitleNamePhone;
-        private System.Windows.Forms.Label lbLaunch;
-        private System.Windows.Forms.Label lbOS;
-        private System.Windows.Forms.Label lbCPU;
         private System.Windows.Forms.Button btnCancelOrder;
         private System.Windows.Forms.Button btnOpenCustomer;
         private System.Windows.Forms.ComboBox cbVender;
@@ -861,5 +897,14 @@
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.TextBox txtCustomer;
         private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label lbMoney;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.DataGridView dgvSale;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Label lbTitleNamePhone;
+        private System.Windows.Forms.Label lbLaunch;
+        private System.Windows.Forms.Label lbOS;
+        private System.Windows.Forms.Label lbCPU;
+        private System.Windows.Forms.TextBox lbsubID;
     }
 }

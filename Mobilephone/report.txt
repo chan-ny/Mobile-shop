@@ -1,0 +1,14 @@
+﻿
+
+ //Manager.ReportingTable.ReportBill(crystalReportViewer1);
+            //Manager.ReportingTable.ReportImport(crystalReportViewer1);
+            //Manager.ReportingTable.ReportImportOrder(crystalReportViewer1);
+            //Manager.ReportingTable.ReportImportSale(crystalReportViewer1);
+            //Manager.ReportingTable.ReportProduct(crystalReportViewer1);
+            //Manager.ReportingTable.ReportInsurace(crystalReportViewer1);
+            Manager.ReportingTable.ReportCustomer(crystalReportViewer1);
+
+
+			information website to data push data program
+
+			URL :https://www.gsmarena.com/apple_iphone_11_pro-9847.php

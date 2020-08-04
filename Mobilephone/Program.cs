@@ -16,7 +16,7 @@ namespace Mobilephone
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormData.formProduct());
+            Application.Run(new formLogin()); 
         }
     }
 }

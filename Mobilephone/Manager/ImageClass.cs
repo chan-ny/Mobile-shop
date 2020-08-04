@@ -13,7 +13,7 @@ namespace Mobilephone.Manager
     {
        public static  MemoryStream img = new MemoryStream();
         
-        public static byte[] setImage(PictureBox photo)
+        public  byte[] setImage(PictureBox photo)
         {
             photo.Image.Save(img, System.Drawing.Imaging.ImageFormat.Bmp);
             return img.ToArray();

@@ -12,6 +12,7 @@ namespace Mobilephone.FormData
 {
     public partial class formRegisterCustomer : Form
     {
+        public string id = "";
         public formRegisterCustomer()
         {
             InitializeComponent();
@@ -72,6 +73,8 @@ namespace Mobilephone.FormData
             Manager.RegisterCustomer.States = 1;
             Manager.RegisterCustomer.checkEmpty(dgvResearching);
             Manager.RegisterCustomer.AutoID(txtCode);
+            id = Manager.RegisterCustomer.ID;
+            this.Close();
 
             /// sent to Data sale
             
@@ -108,5 +111,29 @@ namespace Mobilephone.FormData
             }
         }
 
+        private void dgvResearching_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            lbID.Text = dgvResearching.CurrentRow.Cells[0].Value.ToString();
+            txtNamed.Text = dgvResearching.CurrentRow.Cells[2].Value.ToString();
+            txtLatNamed.Text = dgvResearching.CurrentRow.Cells[3].Value.ToString();
+            txtIdentityold.Text = dgvResearching.CurrentRow.Cells[9].Value.ToString();
+
+        }
+
+        private void btnSelectionCustomer_Click(object sender, EventArgs e)
+        {
+            if(lbID.Text == "")
+            {
+                return;
+            }
+            else
+            {
+                
+
+                id = lbID.Text;
+                this.Close();
+
+            }
+        }
     }
 }

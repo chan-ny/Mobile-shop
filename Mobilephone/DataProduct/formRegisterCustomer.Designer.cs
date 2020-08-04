@@ -62,10 +62,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtHome = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.txtCode = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.txtCode = new System.Windows.Forms.TextBox();
+            this.lbID = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panelResearch.SuspendLayout();
@@ -128,9 +129,9 @@
             this.panelResearch.BackColor = System.Drawing.Color.Silver;
             this.panelResearch.Controls.Add(this.groupBox2);
             this.panelResearch.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelResearch.Location = new System.Drawing.Point(26, 54);
+            this.panelResearch.Location = new System.Drawing.Point(26, 21);
             this.panelResearch.Name = "panelResearch";
-            this.panelResearch.Size = new System.Drawing.Size(460, 359);
+            this.panelResearch.Size = new System.Drawing.Size(486, 457);
             this.panelResearch.TabIndex = 4;
             // 
             // groupBox2
@@ -144,11 +145,12 @@
             this.groupBox2.Controls.Add(this.btnSelectionCustomer);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.txtNamed);
+            this.groupBox2.Controls.Add(this.lbID);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Location = new System.Drawing.Point(0, 0);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(460, 359);
+            this.groupBox2.Size = new System.Drawing.Size(486, 457);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Search Name";
@@ -158,10 +160,11 @@
             // 
             this.dgvResearching.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvResearching.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvResearching.Location = new System.Drawing.Point(3, 194);
+            this.dgvResearching.Location = new System.Drawing.Point(3, 233);
             this.dgvResearching.Name = "dgvResearching";
-            this.dgvResearching.Size = new System.Drawing.Size(454, 162);
+            this.dgvResearching.Size = new System.Drawing.Size(480, 221);
             this.dgvResearching.TabIndex = 3;
+            this.dgvResearching.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvResearching_CellClick);
             // 
             // txtIdentityold
             // 
@@ -217,6 +220,7 @@
             this.btnSelectionCustomer.TabIndex = 2;
             this.btnSelectionCustomer.Text = "Selection";
             this.btnSelectionCustomer.UseVisualStyleBackColor = false;
+            this.btnSelectionCustomer.Click += new System.EventHandler(this.btnSelectionCustomer_Click);
             // 
             // label4
             // 
@@ -410,6 +414,24 @@
             this.label6.TabIndex = 0;
             this.label6.Text = "ບ້ານ :";
             // 
+            // txtCode
+            // 
+            this.txtCode.Enabled = false;
+            this.txtCode.Location = new System.Drawing.Point(173, 61);
+            this.txtCode.Name = "txtCode";
+            this.txtCode.Size = new System.Drawing.Size(208, 31);
+            this.txtCode.TabIndex = 1;
+            this.txtCode.Text = "1";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(111, 64);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(56, 23);
+            this.label12.TabIndex = 0;
+            this.label12.Text = "ລະຫັດ :";
+            // 
             // txtName
             // 
             this.txtName.Location = new System.Drawing.Point(172, 98);
@@ -426,23 +448,15 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "ຊື່ :";
             // 
-            // label12
+            // lbID
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(111, 64);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(56, 23);
-            this.label12.TabIndex = 0;
-            this.label12.Text = "ລະຫັດ :";
-            // 
-            // txtCode
-            // 
-            this.txtCode.Enabled = false;
-            this.txtCode.Location = new System.Drawing.Point(173, 61);
-            this.txtCode.Name = "txtCode";
-            this.txtCode.Size = new System.Drawing.Size(208, 31);
-            this.txtCode.TabIndex = 1;
-            this.txtCode.Text = "1";
+            this.lbID.AutoSize = true;
+            this.lbID.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.lbID.Location = new System.Drawing.Point(362, 37);
+            this.lbID.Name = "lbID";
+            this.lbID.Size = new System.Drawing.Size(28, 23);
+            this.lbID.TabIndex = 0;
+            this.lbID.Text = "ຊື່ :";
             // 
             // formRegisterCustomer
             // 
@@ -505,5 +519,6 @@
         private System.Windows.Forms.RadioButton rFemale;
         private System.Windows.Forms.TextBox txtCode;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label lbID;
     }
 }

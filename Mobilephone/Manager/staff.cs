@@ -232,9 +232,9 @@ namespace Mobilephone.Manager
                 }
 
             }
-            catch (Exception e)
+            catch
             {
-                MessageBox.Show(e.Message);
+                MessageBox.Show("Duplicate key Users");
             }
 
         }
@@ -279,9 +279,9 @@ namespace Mobilephone.Manager
                 }
 
             }
-            catch (Exception e)
+            catch
             {
-                MessageBox.Show(e.Message);
+                MessageBox.Show("Duplicate key Users");
             }
 
         }
@@ -310,9 +310,9 @@ namespace Mobilephone.Manager
                 }
 
             }
-            catch (Exception e)
+            catch 
             {
-                MessageBox.Show(e.Message);
+                MessageBox.Show("Duplicate key Users");
 
             }
         }

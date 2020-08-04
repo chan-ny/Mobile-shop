@@ -15,6 +15,12 @@ namespace Mobilephone.Manager
         {
             txt.Text = dgv.CurrentRow.Cells[number].Value.ToString();
         }
+        public string sentDataGridView(DataGridView dgv, int number)
+        {
+            string values = "";
+            values= dgv.CurrentRow.Cells[number].Value.ToString();
+            return values;
+        }
 
         public  void setImage(DataGridView dgv,PictureBox photo, int number)
         {
