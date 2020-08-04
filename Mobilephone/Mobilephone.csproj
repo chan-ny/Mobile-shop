@@ -469,6 +469,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="report.txt" />
+    <None Include="Resources\mahun1.jpg" />
+    <None Include="Resources\mahun.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />

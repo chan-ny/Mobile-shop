@@ -123,6 +123,26 @@ namespace Mobilephone.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap mahun {
+            get {
+                object obj = ResourceManager.GetObject("mahun", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mahun1 {
+            get {
+                object obj = ResourceManager.GetObject("mahun1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap menu_filled_40px {
             get {
                 object obj = ResourceManager.GetObject("menu_filled_40px", resourceCulture);
